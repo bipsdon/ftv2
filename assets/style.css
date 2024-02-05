@@ -125,9 +125,7 @@ li{
 #check {display: none;}
 @media(max-width: 1218px){
     header{
-        width: 100%;
-        position: fixed;
-        z-index: 1000;
+        position: sticky;
     }
 
     .menu {
@@ -360,6 +358,7 @@ button:hover{
 
 .container-cards .cards:nth-child(odd){
     background-color: rgb(243, 249, 255);
+    transition: 0.15s all ease-in-out;
 }
 
 .container-cards strong{
@@ -745,6 +744,13 @@ button:hover{
     font-weight: bolder;
   }
 
+@media screen and (max-width:610px) {
+    .review-container{
+        width: 100%;
+        border-radius: 0;
+        margin-bottom: 0px;
+      }
+}
 @media screen and (max-width:1450px) {
     .container-cards-reviews{
         flex-direction: column;
@@ -763,11 +769,7 @@ button:hover{
         width: 0%;
       }
 
-      .review-container{
-        width: 100%;
-        border-radius: 0;
-        margin-bottom: 0px;
-      }
+      
 
       .container-text{
         padding: 3x 0px;
@@ -890,17 +892,13 @@ footer{
 }
 
 .chosen-sports-genre-hero:hover{
-   img{
+   .cards2 img{
         filter:brightness(0.2);
         transform: scale(2);
         transition: 0.25s all ease-in-out;
     }
 }
-
-
-
 /* Caraousel */
-
 input[type=radio] {
   display: none;
 }
@@ -1193,7 +1191,7 @@ img {
     text-transform: uppercase;
     border-radius: 10px;
     padding: 10px;
-    background-color: var(--clr-dark-gray);
+    background-color: var(--clr-gray);
     margin-top: 10px;
     box-shadow: var(--stripe);
     height: 250px;
@@ -1218,7 +1216,7 @@ img {
 
 .gray-buttons{
     padding: 10px;
-    background-color: #4b4b4b;;
+    background-color: var(--clr-gray);
     color: var(--clr-gray-contrast);
     font-weight: 650;
     box-shadow: var(--stripe);
@@ -1226,20 +1224,20 @@ img {
 }
 
 .information-texts.buttons{
-    width: 41.5rem;
+    width: 39.5rem;
     height: 5rem;
     margin: 10px auto;
     justify-content: center;
 }
 
 .information-texts.buttons button:hover{
-    background-color: var(--clr-gray);
-    color: var(--clr-normal);
+    background-color: var(--clr-blue);
+    color: var(--clr-primary);
     transition: var(--transitionvar);
 }
 
 .manage-your-information-text.values p:hover{
-    color: var(--clr-primary);
+    color: var(--clr-blue);
     transition: var(--transitionvar);
     cursor: pointer;
 }
@@ -1247,10 +1245,6 @@ img {
 @media screen and (max-width: 713px){
     .caraousel-cards {
         height: 10rem;
-    }
-    
-    header{
-        position: sticky;
     }
 
     .heading-container h1{
@@ -1275,9 +1269,94 @@ img {
     }
     
     .information-texts.buttons{
-        width: 100%;
+        width: 90%;
+        margin: auto;
         flex-direction: row;
     } 
 
 
+}
+
+/* ============================= */
+.form-container{
+
+    strong{
+        font-size: 3rem;
+    }
+
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    background-color: var(--clr-gray);
+}
+
+.info-form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 10px;
+}
+
+.form-row{
+    display: flex;
+    gap: 20px;
+}
+
+.form-row > *{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+
+.form-container form{
+        padding-right: 10px;
+        padding-left: 10px;
+        width: 90%;
+        height: auto;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        align-items: start;
+        margin-bottom: 20px;
+    }
+
+.form-container input{
+    width: 100%;
+    border-bottom: 1px solid var(--clr-gray-contrast);
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    height: 2.5rem;
+    padding: 5px;
+    font-weight: 400;
+    color: var(--clr-gray-contrast);
+    font-size: 1.2rem;
+    background-color: var(--clr-gray);
+    transition: var(--transitionvar);
+}
+
+.form-container input:focus{
+    outline: none;
+    color: var(--clr-blue);
+    border-bottom: 3px solid var(--clr-blue);
+}
+
+.form-heading{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    text-align: center;
+    padding: 5px;
+}
+
+.info-form label{
+    text-transform: capitalize;
+    font-weight: bolder;
+    font-size: 1.2rem;
+    transition: var(--transitionvar);
 }
