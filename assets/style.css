@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css?family=DM+Sans:400,500,700&display=swap");
+
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;900&display=swap');
 :root{
     --clr-primary : white;
@@ -8,8 +10,12 @@
     --shadow:rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
     font-family:Montserrat, Roboto, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif,system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     --clr-gray: #f1f1f0;
+    --clr-dark-gray: #202020;
+    --clr-gray-contrast: #a8a8a8;
     --stripe: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
     --black-gradient:linear-gradient(to right, rgb(67, 67, 67) 0%, black 100%);
+    --transitionvar: 0.2s all ease-in-out;
+    --clr-light-blue:#150d52;
 }
 
 *{
@@ -17,7 +23,6 @@
     margin: 0;
     padding: 0;
     scroll-behavior: smooth;
-    cursor: default;
 }
 
 .circle {
@@ -42,6 +47,11 @@ a{
     text-decoration: none;
     color: inherit;
     cursor: pointer;
+}
+
+strong::selection, p::selection{
+    background: var(--clr-secondary);
+    color: var(--clr-blue);
 }
 
 li{
@@ -220,8 +230,8 @@ li{
 }
 
 button{
-    margin-top: 5px;
-    width: 30%;
+    
+    width: 150px;
     height: 50px;
     background-color: var(--clr-blue);
     color: white;
@@ -723,6 +733,7 @@ button:hover{
    color: var(--clr-blue);
    width: 20%;
    font-size: 10px;
+   margin-bottom: 10px;
    font-weight: bolder;
  }
 
@@ -889,7 +900,6 @@ footer{
 
 
 /* Caraousel */
-@import url("https://fonts.googleapis.com/css?family=DM+Sans:400,500,700&display=swap");
 
 input[type=radio] {
   display: none;
@@ -1041,3 +1051,233 @@ img {
   transform: translateY(-80px);
 }
 
+.container-brn{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.container-brn button{
+    margin: 10px;
+}
+
+
+.categories{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+    width: 100%;
+    margin: 10px auto auto auto;
+    background-color: var(--clr-gray);
+    transition: var(--transitionvar);
+    color: var(--clr-blue);
+    text-align: center;
+    overflow: hidden;
+}
+
+.categories-heading{
+    padding-top: 2rem;
+    font-size: 3rem;
+}
+
+.categories-cards-container{
+    display: grid;
+    width: 100%;
+    grid-template-columns: auto auto;
+    grid-row: auto auto;
+    grid-column-gap: 20px;
+    margin: auto;
+    justify-content: center;
+    cursor: pointer;
+}
+
+
+.categories img{
+    width: 100%;
+    max-width: 350px;
+    object-fit: cover;
+    transition: 0.2s all ease-in-out;
+}
+
+.categories-cards{
+    box-shadow: var(--stripe);
+    margin-bottom: 1.5rem;
+    border-radius: 0.8px    ;
+    transition: var(--transitionvar);
+}
+
+.categories-cards strong{
+    visibility: hidden;
+    transition: var(--transitionvar);
+}
+
+.categories-cards .cards-text{
+    margin-bottom: 0.5rem;
+    
+}
+
+.categories:hover{
+    background-color: var(--clr-blue);
+    transition: var(--transitionvar);
+    color: var(--clr-primary);
+
+    .categories-cards{
+        background-color: var(--clr-light-blue);
+        transition: var(--transitionvar);
+        border-radius: 30px;
+    }
+    
+    .categories-cards:hover img{
+        transform: scale(1.18);
+    }
+
+    .categories-cards strong{
+        visibility: visible;
+        color: var(--clr-primary);
+        font-size: 1.2rem;
+        transition: var(--transitionvar);
+    }
+}
+
+@media screen and (max-width: 1350px){
+    .categories-cards-container{
+        flex-direction: column;
+    }
+
+    .categories-cards strong{
+        visibility: visible;
+    }
+}
+
+.manage-your-information{
+    display: flex;
+    gap: 2rem;
+    width: 90%;
+    margin: auto;
+    justify-content: center;
+}
+
+.manage-your-information-sub{
+    width: 8rem;
+    border-radius: 70%;
+    margin: 10px;
+}
+
+.manage-your-information-sub img{
+    width: 100%;
+    max-width: 150px;
+    border-radius: 60%;
+    max-width: 150px;
+    box-shadow: var(--stripe);
+}
+
+
+.your-profile{
+    width: 90%;
+    margin: auto;
+    text-align: center;
+    font-size: 58px;
+    color: var(--clr-blue);
+}
+
+/* .your-profile strong{
+} */
+
+
+.information-texts{
+    display: flex;
+    gap: 2.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: var(--clr-dark-gray);
+    margin-top: 10px;
+    box-shadow: var(--stripe);
+    height: 250px;
+}
+
+.information-texts-wrapper{
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.information-texts .manage-your-information-text{
+    position: relative;
+    padding: 10px;
+    top: 10%;
+    color: var(--clr-gray-contrast);
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    transition: var(--transitionvar);
+}
+
+.gray-buttons{
+    padding: 10px;
+    background-color: #4b4b4b;;
+    color: var(--clr-gray-contrast);
+    font-weight: 650;
+    box-shadow: var(--stripe);
+    transition: var(--transitionvar);
+}
+
+.information-texts.buttons{
+    width: 41.5rem;
+    height: 5rem;
+    margin: 10px auto;
+    justify-content: center;
+}
+
+.information-texts.buttons button:hover{
+    background-color: var(--clr-gray);
+    color: var(--clr-normal);
+    transition: var(--transitionvar);
+}
+
+.manage-your-information-text.values p:hover{
+    color: var(--clr-primary);
+    transition: var(--transitionvar);
+    cursor: pointer;
+}
+
+@media screen and (max-width: 713px){
+    .caraousel-cards {
+        height: 10rem;
+    }
+    
+    header{
+        position: sticky;
+    }
+
+    .heading-container h1{
+        font-size: 70px;
+    }
+
+    .information-texts{
+        align-items: center;
+        flex-direction: column-reverse;
+        width: 100%;
+        height: auto;
+    }
+
+    .manage-your-information{
+        width: 100%;
+    }
+
+    .information-texts-wrapper{
+        font-size: smaller;
+        text-wrap: nowrap;
+        padding: 10px;
+    }
+    
+    .information-texts.buttons{
+        width: 100%;
+        flex-direction: row;
+    } 
+
+
+}
