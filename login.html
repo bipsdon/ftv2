@@ -45,62 +45,38 @@
 
   <section name="manage-your-info-form">
       <div class="form-main-container">
-        <div class="form-container">
-          <div class="form-heading">
-              <strong>Manage Your Informations</strong>
-              <i>All values are not necessarily to be filled, if filled before. If you don't wish to enter new value for a field, leave it as it is.</i>
-          </div>
-          <form action="" class="form-setup">
+          <div class="form-container">
+            <div class="form-heading">
+                <strong>Login</strong>
+                <!-- <i>All values are not necessarily to be filled, if filled before. If you don't wish to enter new value for a field, leave it as it is.</i> -->
+            </div>
+          <form action="" class="form-setup login">
               <div class="info-form">
                   <div class="form-row">
                       <div>
-                          <label for="firstname">First Name:</label>
-                          <input type="text" id="firstname" name="firstname" value="Last Name" autocomplete="given-name" >
-                      </div>
-                      <div>
-                          <label for="lastname">Last Name</label>
-                          <input type="text" name="lastname" id="lastname" value="Last Name" autocomplete="family-name">
-                      </div>
-                  </div>
-        
-                  <div class="form-row">
-                      <div>
                           <label for="email">Email</label>
-                          <input type="email" name="email" id="email" value="someone@example.com" autocomplete="email">
+                          <input type="email" name="email" id="email" placeholder="someone@example.com" autocomplete="email">
                       </div>
                   </div>
                   <div class="form-row">
                       <div>
-                          <label for="number">Phone Number</label>
-                          <input type="number" id="number" name="number" value="124567890" autocomplete="mobile">
+                          <label for="password">Password</label>
+                          <input type="password" id="password" name="password" placeholder="********" autocomplete="current-password">
                       </div>
                   </div>
-                  <div class="form-row">
-                      <div>
-                          <label for="street">Street</label>
-                          <input type="text" id="street" name="street" value="Street" autocomplete="street-address">
-                      </div>
-        
-                      <div>
-                          <label for="city">City</label>
-                          <input type="text" id="city" name="city" value="City" autocomplete="address-level2">
-                      </div>
-                      <div>
-                          <label for="district">District</label>
-                          <input type="text" id="district" name="district" value="District" autocomplete="address-level3">
-                      </div>
-                      <div>
-                          <label for="country">Country</label>
-                          <div style="display: flex;">
-                              <i class="fa-solid fa-lock input-icon" style="color: #a8a8a8"></i>
-                              <input type="text" name="country" value="Nepal" id="country" disabled>
-                          </div>
-                      </div>
-                  </div>
+
+                  <div class="form-row links">
+                        <a class="form-row-links" href="">Forgot Password?</a>
+                    </div>
+
+                    <div class="form-row links">    
+                        <a class="form-row-links" href="Signup.html">Create a New Account</a>
+                    </div>
+                  
                   <div>
                       <div class="information-texts buttons manage-info">
                           <button class="gray-buttons"><a href="ManageInformation.html">Submit</a></button>
-                          <button class="gray-buttons">Cancel</button>
+                          <!-- <button class="gray-buttons">Cancel</button> -->
                       </div>
                   </div>
               </div>
