@@ -43,7 +43,6 @@
     </header>
   </section>
 
-  <section name="manage-your-info-form">
       <div class="form-main-container">
         <div class="form-container">
           <div class="form-heading">
@@ -93,18 +92,25 @@
                           <label for="city">City*</label>
                           <input type="text" id="city" name="city" placeholder="City" autocomplete="address-level2" required>
                       </div>
-                      <div>
-                          <label for="district">District*</label>
-                          <input type="text" id="district" name="district" placeholder="District" autocomplete="address-level3" required>
-                      </div>
-                      <div>
-                          <label for="country">Country</label>
-                          <div style="display: flex;">
-                              <i class="fa-solid fa-lock input-icon" style="color: #a8a8a8"></i>
-                              <input type="text" name="country" value="Nepal" id="country" disabled>
-                          </div>
+                  </div>
+                  
+                  <div class="form-row">
+                    <div>
+                      <label for="district">District*</label>
+                      <input type="text" id="district" name="district" placeholder="District" autocomplete="address-level3" required>
+                    </div>
+                  </div>
+
+                  <div class="form-row" >
+                    <div>
+                      <label for="country">Country</label>
+                      <div style="display: flex;">
+                          <i class="fa-solid fa-lock input-icon" style="color: #a8a8a8"></i>
+                          <input type="text" name="country" value="Nepal" id="country" disabled>
                       </div>
                   </div>
+                  </div>
+
                   <div>
                       <div class="information-texts buttons manage-info">
                           <button type="submit" class="gray-buttons">Submit</a></button>
@@ -115,7 +121,6 @@
           </form>
             </div>
       </div>
-  </section>
 
   <section name="footer">
     <div class="footer-links">

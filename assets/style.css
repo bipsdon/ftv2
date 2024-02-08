@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;900&display=swap');
+@import "https://unpkg.com/open-props";
+/* @import "https://unpkg.com/open-props/normalize.min.css"; */
 :root{
     --clr-primary : white;
     --clr-secondary : hsl(0, 100%, 50%);
@@ -14,6 +16,7 @@
     --black-gradient:linear-gradient(to right, rgb(67, 67, 67) 0%, black 100%);
     --transitionvar: 0.2s all ease-in-out;
     --clr-light-blue:#150d52;
+    --gradient: linear-gradient(var(--clr-secondary), rgb(255, 200, 0));
 }
 
 *{
@@ -57,7 +60,7 @@ li{
 }
 
 .gradient-text{
-    background: linear-gradient(var(--clr-secondary), rgb(255, 200, 0));
+    background: var(--gradient);
     /* background: linear-gradient(var(--clr-secondary),rgb(255, 200, 0)); */
     background-clip: text;
     color: transparent;
@@ -334,12 +337,13 @@ button:hover{
 .container-cards{
     display: flex;
     padding: 10px;
-    justify-content: space-around;
+    justify-content: flex-start;
     margin: auto;
     width: 70%;
 }
 
 .cards{
+    flex: 1;
     box-shadow: var(--stripe);
     border-radius: 15px;
     align-items: center;
@@ -391,7 +395,8 @@ button:hover{
     }
 
     .cards {
-        width: 100%; /* Adjust card width for smaller screens */
+        width: 18rem;
+        padding: 1rem; /* Adjust card width for smaller screens */
     }
 
     .cards img{
@@ -1265,9 +1270,10 @@ img {
     }
     
     .information-texts.buttons{
-        width: 90%;
-        margin: auto;
+        width: 100%;
+        margin: 20px auto;
         flex-direction: row;
+        
     } 
 
 
@@ -1363,7 +1369,7 @@ input{
     display: flex; /* Enables flexbox layout */
     justify-content: center; /* Centers children horizontally */
     align-items: center; /* Centers children vertically */
-    height: 100vh; /* Sets the height of the container to fill the viewport */
+    height: auto; /* Sets the height of the container to fill the viewport */
     width: 100%; /* Ensures the container takes full width of the viewport */
     background-color: var(--clr-gray);
     padding: 10px;
@@ -1394,6 +1400,10 @@ input{
     .form-setup.login{
         width: 100%;
         padding: 10px;
+    }
+
+    .form-main-container{
+        padding: 5px;
     }
 }
 
@@ -1692,3 +1702,257 @@ input{
 }
 
 /* .container-cards .cards:nth-child(odd) */
+
+.login-signup-container{
+    width: 100%;
+    height: auto;
+    background-color: var(--clr-gray);
+}
+
+.login-signup-container-sub{
+    display: flex;
+    justify-content: space-around;
+}
+
+.login-signup-container-sub input{
+    width: 100%;
+}
+
+.login-signup-container-div{
+    width: 100%;
+    /* margin: 10px; */
+}
+
+.login-signup-container-div .form-container{
+    background-color: white;
+    background-color: inherit;
+}
+
+.login-signup-container-div.login{
+    background-color: var(--clr-primary);
+    padding: 10% 10% 10% 10%;
+}
+
+.login-signup-container-div.signup{
+    padding: 5% 5% 5% 5%;
+    background-color: var(--clr-gray);
+}
+
+.login-signup-container-div{
+    display: flex;
+    flex-direction: column;
+    gap: 1.8rem;
+}
+
+.login-signup-container-div b{
+    text-align: left;
+}
+
+.login-signup-container-div form .form-container{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: flex-start;
+}
+
+.login-signup-container button{
+    background-color: var(--clr-blue);
+    color: var(--clr-primary);
+    text-transform: uppercase;
+    text-align: center;
+    padding: 5px;
+    width: 100%;
+    transition: var(--transitionvar);
+}
+
+.login-signup-container button:hover{
+    background-color: var(--clr-primary);
+    border: 1px solid var(--clr-dark-gray);
+    color: var(--clr-blue);
+}
+
+.login-signup-container strong{
+    font-size: 2rem;
+}
+
+.login-signup-container input{
+    border-radius: 5px;
+    border:none;
+    height: 2.7rem;
+    transition: 0.25s all ease-in-out;
+}
+
+.login-signup-container input:focus{
+    border: 3px solid var(--clr-blue);
+    transition: var(--transitionvar);
+}
+
+.login-signup-container-div.signup input{
+    background-color: var(--clr-primary);
+}
+
+.login-signup-container-div.signup small{
+    text-transform: capitalize;
+}
+
+.login-signup-container input::placeholder{
+    font-size: medium;
+    font-weight: lighter;
+    color: var(--clr-blue);
+    padding: 10px;
+}
+
+@media screen and (max-width: 787px) {
+    .login-signup-container-sub{
+        flex-direction: column;
+    }
+
+    .login-signup-container-div.signup{
+        padding: 10% 10% 10% 10%;
+    }
+}
+
+
+
+/* Partner With Us */
+chosen-sports-genre-hero.partner img{
+    filter: brightness(00.15s);
+}
+
+.gradient-text.partner{
+    font-size: 1rem;
+    font-weight: bolder;
+}
+
+.available-merch{
+    padding: 2%;
+    background-color: var(--clr-blue);
+    width: 90%;
+    margin: 10px auto 10px;
+    border-radius: 5px;
+}
+
+.merch-card-container {
+    margin-top: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 2rem;
+    gap: 40px;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.available-merch .gradient-text.heading {
+    font-size: 3rem;
+    font-weight: bolder;
+}
+
+.merch-card-container .merch-card {
+    height: 250px;
+    width: 250px;
+    position: relative;
+    margin-bottom: 10px;
+    overflow: hidden; 
+    transition: var(--transitionvar);
+    cursor: pointer;/* Ensure content does not overflow the card's boundaries */
+}
+
+.merch-card-container .merch-card img {
+    width: 100%;
+    height: 100%; /* Adjust this if you want the image to cover the entire card area */
+    object-fit: cover;
+    transition: var(--transitionvar);
+     /* This will ensure the image covers the area without distorting its aspect ratio */
+}
+
+.merch-card-container .gradient-text {
+    visibility: hidden;
+    font-size: 2rem;
+    position: absolute;
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Ensures exact centering by shifting the element back by half its width and height */
+    width: 100%; /* Ensures the text spans the width of the container */
+    text-align: center; /* Centers the text inside its container */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for better readability */
+    padding: 0.5rem; /* Optional: Adds padding to the text */
+    /* transition: var(--transitionvar); */
+}
+
+
+.merch-card-container .merch-card:hover .gradient-text{
+        visibility: visible;
+        transition: var(--transitionvar);
+}
+
+
+.merch-card-container .merch-card:hover img{
+    filter: brightness(0.15) blur(5px);
+    transition: var(--transitionvar);
+}
+
+
+@media screen and (max-width: 720px) {
+    .merch-card-container{
+        justify-content: center;
+        padding: 0px;
+        transition: var(--transitionvar);
+    }
+}
+
+.partner-team-hero{
+    background-color: var(--clr-blue);
+    display: flex;
+    justify-content: space-around;
+    gap: 60px;
+}
+
+.partner-team-hero img{
+    height: 300px;
+    width: 300px;
+    margin-bottom: 20px;
+}
+
+.partner-team-hero-texts{
+    padding-top: 5%;
+    font-size: 1.5rem;
+    color: white;
+}
+
+.gradient-text.bold{
+    font-weight: bolder;
+    text-transform: uppercase;
+    font-size: 3rem;
+}
+
+.gradient-separator{
+    height: 5px;
+    background: var(--clr-secondary);
+}
+
+.partner-container{
+    background: var(--clr-blue);
+}
+
+.available-merch.partner{
+    margin: 0px auto;
+}
+
+.partner-team-hero-socials{
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    font-size: 2rem;
+    margin-top: 10%;
+}
+
+.partner-team-hero-socials i{
+
+    transition: var(--transitionvar);
+}
+
+.partner-team-hero-socials i:hover{
+    transition: var(--transitionvar);
+    color: var(--clr-secondary);
+    transition: var(--transitionvar);
+}
