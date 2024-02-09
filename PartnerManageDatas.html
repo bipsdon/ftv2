@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Future Apparel</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="assets/style.css" />
+</head>
+
+<section name="navbar">
+    <header>
+      <nav>
+        <ul class="nav-bar">
+          <li class="logo">
+            <a href="#"><img src="./images/logo.png" /></a>
+          </li>
+          <input type="checkbox" id="check" />
+          <span class="menu">
+            <li><a href="index.html">Home</a></li>
+            <li>
+              <a href="index.html#sports-genre">Jersey</a>
+            </li>
+            <li><a href="">Other Wears</a></li>
+            <li><a href="">Merchant</a></li>
+            <li><a href="">About Us</a></li>
+            <li><a href="">Login</a></li>
+            <label for="check" class="close-menu"
+              ><i class="fas fa-times"></i
+            ></label>
+          </span>
+          <label for="check" class="open-menu"
+            ><i class="fas fa-bars"></i
+          ></label>
+        </ul>
+      </nav>
+    </header>
+  </section>
+
+  <div style="display: flex; margin-top: 10px;  justify-content: center;"><strong style="font-size: 2rem;">Manage Your Product</strong></div>
+
+  <div class="table-wrapper">
+      <table>
+        <thead>
+            <tr>
+                <th>Product </th>
+                <th>Product Code</th>
+                <th>Product Name</th>
+                <th>Price</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td data-label="Product ">1</td>
+                <td data-label="Product Code">John</td>
+                <td data-label="Product Name">Doe</td>
+                <td data-label="Price">john.doe@example.com</td>
+                <td data-label="Action"><button class="btn-scaffold">Delete</button></td>
+            </tr>
+            <tr>
+                <td data-label="Product ">2</td>
+                <td data-label="Product Code">Jane</td>
+                <td data-label="Product Name">Smith</td>
+                <td data-label="Price">jane.smith@example.com</td>
+                <td data-label="Action"><button class="btn-scaffold">Delete</button></td>
+            </tr>
+            <!-- More rows as needed -->
+        </tbody>
+      </table>
+  </div>
+
+  <section name="footer">
+    <div class="footer-links">
+      <div class="col">
+        <strong>Useful Links</strong>
+        <ul>
+          <li><a href="">Home</a></li>
+          <li><a href="">Categories</a></li>
+          <li><a href="">Jersey Collection</a></li>
+          <li><a href="">Other Wears</a></li>
+          <li><a href="">Contact Us</a></li>
+          <li><a href="">Partner With Us</a></li>
+          <li><a href="">Refer and Earn</a></li>
+          <li><a href="">Terms and Conditiosn</a></li>
+          <li><a href="">Privacy Policy</a></li>
+        </ul>
+      </div>
+      <div class="col">
+        <strong>Useful Links</strong>
+        <ul>
+          <li><a href="">Home</a></li>
+          <li><a href="">Categories</a></li>
+          <li><a href="">Jersey Collection</a></li>
+          <li><a href="">Other Wears</a></li>
+          <li><a href="">Contact Us</a></li>
+          <li><a href="">Partner With Us</a></li>
+          <li><a href="">Refer and Earn</a></li>
+          <li><a href="">Terms and Conditiosn</a></li>
+          <li><a href="">Privacy Policy</a></li>
+        </ul>
+      </div>
+      <div class="col">
+        <strong>Useful Links</strong>
+        <ul>
+          <li><a href="">Home</a></li>
+          <li><a href="">Categories</a></li>
+          <li><a href="">Jersey Collection</a></li>
+          <li><a href="">Other Wears</a></li>
+          <li><a href="">Contact Us</a></li>
+          <li><a href="">Partner With Us</a></li>
+          <li><a href="">Refer and Earn</a></li>
+          <li><a href="">Terms and Conditiosn</a></li>
+          <li><a href="">Privacy Policy</a></li>
+        </ul>
+      </div>
+    </div>
+    <footer>
+      <div class="footer">
+        <small>Coypright 2024 <i class="fa-regular fa-copyright"></i> | FUTURE APPAREL</small>
+      </div>
+    </footer>
+  </section>
+
+  <section name="pointer">
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <script>
+      const coords = { x: 0, y: 0 };
+      const circles = document.querySelectorAll(".circle");
+      const colors = [
+        "#ffb56b",
+        "#fdaf69",
+        "#f89d63",
+        "#f59761",
+        "#ef865e",
+        "#ec805d",
+        "#e36e5c",
+        "#df685c",
+        "#d5585c",
+        "#d1525c",
+        "#c5415d",
+        "#c03b5d",
+        "#b22c5e",
+        "#ac265e",
+        "#9c155f",
+        "#950f5f",
+        "#830060",
+        "#7c0060",
+        "#680060",
+        "#60005f",
+        "#48005f",
+        "#3d005e"
+      ];
+      circles.forEach(function (circle, index) {
+        circle.x = 0;
+        circle.y = 0;
+        circle.style.backgroundColor = colors[index % colors.length];
+      });
+      window.addEventListener("mousemove", function(e){
+        coords.x = e.clientX;
+        coords.y = e.clientY;
+    
+      });
+      function animateCircles() {
+    
+        let x = coords.x;
+        let y = coords.y;
+    
+        circles.forEach(function (circle, index) {
+          circle.style.left = x - 12 + "px";
+          circle.style.top = y - 12 + "px";
+    
+          circle.style.scale = (circles.length - index) / circles.length;
+    
+          circle.x = x;
+          circle.y = y;
+          const nextCircle = circles[index + 1] || circles[0];
+          x += (nextCircle.x - x) * 0.3;
+          y += (nextCircle.y - y) * 0.3;
+        });
+    
+        requestAnimationFrame(animateCircles);
+      }
+      animateCircles();
+    </script>
+  </section>
+</body>
+</html>

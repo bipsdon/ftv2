@@ -30,7 +30,7 @@
                 <a href="index.html#sports-genre">Jersey</a>
               </li>
               <li><a href="">Other Wears</a></li>
-              <li><a href="">Merchant</a></li>
+              <li><a href="PartnerWithUs.html">Merchant</a></li>
               <li><a href="">About Us</a></li>
               <li><a href="login.html">Login</a></li>
               <label for="check" class="close-menu"
@@ -45,59 +45,47 @@
       </header>
     </section>
 
-    <div class="chosen-sports-genre-hero partner">
-        <img src="https://images.pexels.com/photos/162379/lost-places-pforphoto-leave-factory-162379.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="basketball">
-        <div class="chosen-sports-genre-hero-text partner">
-              <strong class="gradient-text partner">Partner With Us</strong>
-              <p>Open Your Own Merch On Our Website</p>
-        </div>
-      </div>
-
-      <section name="review-container">
-        <div class="review-container">
-          <p>Partner With Us</p>
-          <p>Upload Your Merch On Our Website</p>
-          <a
-              href="PartnerSignUp.html">
-          <button>
-            Become a Partner  
-          </button>
-          </a>
-        </div>
-      </section>
-
-      <div class="available-merch">
-            <strong class="gradient-text heading">Partner Teams</strong>
-
-            <div class="merch-card-container">
-                <div class="merch-card">
-                    <img src="https://placehold.co/350x350" alt="team name">
-                    <strong class="gradient-text">Team Name</strong>
-                </div>
-                <a href="PartnerTeam.html">
-                  <div class="merch-card">
-                      <img src="https://placehold.co/350x350" alt="team name">
-                      <strong class="gradient-text">Team Name</strong>
+    <div class="login-signup-container">
+        <div class="login-signup-container-sub">
+            <div class="login-signup-container-div login partner">
+              <strong>Login</strong>
+              <form action="">
+                <div class="form-container">
+                    <input type="text" name="teamname" placeholder="Team Name -- Max Length: 30 characters" maxlength="30" autocomplete="name">
+                    <input type="text" name="sports-genre" placeholder="Sports Genre (Football / Basketball / Cricket / Volleyball / Esports)" maxlength="15" autocomplete="current-password">
+                    <div class="file-container">
+                      <input type="file" id="logo" name="logo" title="Upload Logo">
+                      <label for="logo">Upload Your Logo <small>Maximum Size : 250KB</small></label>
+                    </div>
+                    <label style="font-size: 10rem; text-align: center;" for="logo"><i class="fa-solid fa-cloud-arrow-up"></i></label>
+                    <i style="font-weight: 400;" id="filename">Uploaded File: No File Uploaded</i>
+                    <input type="email" name="email" placeholder="Email Address"  autocomplete="email">
+                    <input type="number" name="number" placeholder="Phone Number"  autocomplete="mobile">
+                    <small style="font-weight: 300;"><i>By registering for an account or participating in the Future Apparel Partnership Program, you acknowledge and agree that you have read, understood, and consent to be bound by the Terms and Conditions governing the program. These Terms outline your rights and responsibilities within the program, as well as the protections and limitations set forth by Future Apparel. Your participation in the program is conditional upon your acceptance of these Terms. We encourage you to review them carefully to ensure you are fully informed about your participation in the program. If you have any questions or concerns regarding these Terms, please contact us prior to signing up. </i></small>
+                    <button type="submit">Login</button>
                   </div>
-                </a>
-
-                <div class="merch-card">
-                    <img src="https://placehold.co/350x350" alt="team name">
-                    <strong class="gradient-text">Team Name</strong>
-                </div>
-
-                <div class="merch-card">
-                    <img src="https://placehold.co/350x350" alt="team name">
-                    <strong class="gradient-text">Team Name</strong>
-                </div>
-
-                <div class="merch-card">
-                    <img src="https://placehold.co/350x350" alt="team name">
-                    <strong class="gradient-text">Team Name</strong>
-                </div>
+                </form>
             </div>
-      </div>
+        </div>
+    </div>
+
+    <script>
+      document.getElementById('logo').addEventListener('change', function() {
+          const maxSize = 250 * 1024; // 250KB in Bytes
+          const fileSize = this.files[0].size;
+          const fileName = this.files[0].name;
       
+          if (fileSize > maxSize) {
+              alert('The file size is too large. Maximum size is 250KB.');
+              // Clear the selected file
+              this.value = '';
+          } else {
+              // Proceed with your file upload logic here
+              document.getElementById('filename').innerHTML = "Uploaded file : "+fileName;
+          }
+      });
+      </script>
+
     <section name="footer">
         <div class="footer-links">
           <div class="col">
@@ -149,7 +137,7 @@
           </div>
         </footer>
       </section>
-    
+  
       <section name="pointer">
         <div class="circle"></div>
         <div class="circle"></div>
@@ -231,5 +219,7 @@
           animateCircles();
         </script>
       </section>
+      
     </body>
-    </html>
+  </html>
+  
